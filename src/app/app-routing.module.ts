@@ -8,8 +8,24 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'tab-inicial',
     pathMatch: 'full'
+  },
+  {
+    path: 'tab1p',
+    loadChildren: () => import('./pages/tab1p/tab1p.module').then( m => m.Tab1pPageModule)
+  },
+  {
+    path: 'tab2p',
+    loadChildren: () => import('./pages/tab2p/tab2p.module').then( m => m.Tab2pPageModule)
+  },
+  {
+    path: 'tab3p',
+    loadChildren: () => import('./pages/tab3p/tab3p.module').then( m => m.Tab3pPageModule)
+  },
+  {
+    path: 'tab-inicial',
+    loadChildren: () => import('./pages/tab-inicial/tab-inicial.module').then( m => m.TabInicialPageModule)
   },
 ];
 
